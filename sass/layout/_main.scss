@@ -1,0 +1,322 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+main {
+  @include breakpoint(desktop) {
+    padding: 7% 10% 7% 15%;
+
+    section {
+      .pieza1 {
+        display: flex;
+        div {
+          padding: 60px 125px 60px 0;
+
+          h2 {
+            font-size: 60px;
+            font-family: $big-shoulders-font;
+            font-weight: 900;
+            line-height: 60px;
+            width: 350px;
+            height: 120px;
+          }
+          p {
+            width: 350px;
+            height: 128px;
+            font-family: $outfit-font;
+            font-size: 22px;
+            line-height: 32px;
+            margin-top: 32px;
+          }
+        }
+        .pintura2 {
+          width: 735px;
+          height: 400px;
+          margin-left: auto;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+      }
+      .pieza2 {
+        display: flex;
+        margin-top: 30px;
+        .pintura3 {
+          width: 868px;
+          height: 686px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .inspired {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          .pintura4 {
+            width: 475px;
+            height: 313px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .texsinspire {
+            margin-left: 30px;
+            padding: 34px 65px 35px 64px;
+            background-color: $color2;
+            h2 {
+              font-size: 60px;
+              font-family: $big-shoulders-font;
+              font-weight: 900;
+              line-height: 60px;
+              width: 350px;
+              height: 120px;
+              margin-bottom: 32px;
+              color: $color4;
+            }
+            p {
+              width: 350px;
+              height: 96px;
+              font-family: $outfit-font;
+              font-size: 22px;
+              line-height: 32px;
+              color: $color4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ─── Tablet ───
+@include breakpoint(tablet) {
+  main {
+    margin-top: 110px;
+    section {
+      padding: 0px 25px 120px 25px;
+      .pieza1 {
+        display: flex;
+        gap: 68px;
+        div {
+          width: 223px;
+          height: 299px;
+          h2 {
+            width: 219px;
+            height: 135px;
+            font-size: 50px;
+            margin-bottom: 24px;
+            line-height: 45px;
+            font-weight: 900;
+            font-family: $big-shoulders-font;
+          }
+          p {
+            width: 223px;
+            height: 140px;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: $outfit-font;
+            font-weight: 400;
+            color: $color3;
+          }
+        }
+        .pintura2 {
+          width: 100%;
+          height: 400px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+      }
+
+      .pieza2 {
+        margin-top: 11px;
+        display: flex;
+        gap: 11px;
+
+        .pintura3 {
+          width: 100%;
+          height: 720px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        .inspired {
+          .pintura4 {
+            width: 100%;
+            height: 313px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+          }
+          .texsinspire {
+            margin-top: 11px;
+            padding: 85px 29px;
+            background-color: black;
+
+            h2 {
+              color: white;
+              width: 223px;
+              height: 90px;
+              font-size: 50px;
+              font-family: $big-shoulders-font;
+              font-weight: 900;
+              line-height: 45px;
+              margin-bottom: 24px;
+            }
+            p {
+              color: white;
+              width: 223px;
+              height: 112px;
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ─── Mobile ───
+@include breakpoint(mobile) {
+  main {
+    margin-top: 80px;
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 1726px;
+      padding: 0px 16px;
+      .pieza1 {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          width: 100%;
+          height: 223px;
+          order: 2;
+          h2 {
+            width: 100%;
+            height: 90px;
+            font-size: 45px;
+            margin-bottom: 21px;
+            line-height: 45px;
+            font-weight: 900;
+            font-family: $big-shoulders-font;
+          }
+          p {
+            width: 343px;
+            height: 112px;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: $outfit-font;
+            font-weight: 400;
+            color: $color3;
+          }
+        }
+        .pintura2 {
+          margin-bottom: 25px;
+          position: relative;
+          order: 1;
+          width: 343px;
+          height: 320px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+      }
+
+      .pieza2 {
+        margin-top: 30px;
+        .pintura3 {
+          width: 343px;
+          height: 480px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+      }
+
+      .pieza2 {
+        .pintura3 {
+          width: 343px;
+          height: 480px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        .inspired {
+          margin-top: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .pintura4 {
+            width: 343px;
+            height: 200px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
+          }
+          .texsinspire {
+            width: 100%;
+            height: 293px;
+            background-color: $color2;
+            padding: 48px 24px 47px 24px;
+
+            h2 {
+              width: 295px;
+              height: 90px;
+              color: $color4;
+              font-size: 45px;
+              font-family: $big-shoulders-font;
+              font-weight: 900;
+              line-height: 45px;
+              margin-bottom: 24px;
+            }
+            p {
+              width: 295px;
+              height: 84px;
+              color: $color4;
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,371 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ─── Desktop ───
+@include breakpoint(desktop) {
+  .page-location {
+    width: 100%;
+    header {
+      position: relative;
+      width: 100%;
+      height: 685px;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 165px;
+        z-index: 2;
+      }
+
+      .pintura1 {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 548px;
+      background-color: $color2;
+      padding: 0;
+      section.ourlocation {
+        article.location {
+          display: flex;
+
+          width: 100%;
+          height: 316px;
+          padding: 110px 165px;
+
+          gap: 220px;
+
+          h2 {
+            font-family: $big-shoulders-font;
+            font-size: 70px;
+            font-weight: 900;
+            line-height: 70px;
+            color: $color4;
+            width: 350px;
+            height: 140px;
+          }
+
+          .infolocation {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-left: 175px;
+
+            h3 {
+              font-family: $big-shoulders-font;
+              font-size: 36px;
+              font-weight: 900;
+              line-height: 36px;
+              color: $color1;
+              width: 350px;
+              height: 36px;
+              margin-bottom: 24px;
+            }
+
+            .adres {
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              color: $color4;
+              margin-bottom: 32px;
+            }
+
+            .description {
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 32px;
+              color: $color4;
+              width: 457px;
+              height: 128px;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      height: 244px;
+      background-color: $color1;
+      figure {
+        img {
+          filter: brightness(0);
+        }
+      }
+      p {
+        color: $color2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+      }
+      .redes {
+        img {
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+}
+
+// ─── Tablet ───
+@include breakpoint(tablet) {
+  .page-location {
+    width: 100%;
+    header {
+      position: relative;
+      width: 100%;
+      height: 600px;
+
+      div {
+        position: absolute;
+        top: 0px;
+        left: 40px;
+        z-index: 2;
+      }
+
+      .pintura1 {
+        width: 100%;
+        height: 600px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 436px;
+      padding: 85px 39px;
+      background-color: $color2;
+      margin-top: 0px;
+      section.ourlocation {
+        padding: 0px;
+        article.location {
+          display: flex;
+          width: 689px;
+          height: 268px;
+          gap: 20px;
+
+          h2 {
+            font-family: $big-shoulders-font;
+            font-size: 55px;
+            font-weight: 900;
+            line-height: 50px;
+            color: $color4;
+            width: 223px;
+            height: 100px;
+          }
+
+          .infolocation {
+            margin-left: 135px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 398px;
+            height: 268px;
+
+            h3 {
+              font-family: $big-shoulders-font;
+              font-size: 32px;
+              font-weight: 900;
+              line-height: 32px;
+              color: $color1;
+            }
+
+            .adres {
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              color: $color4;
+              font-weight: 400;
+            }
+
+            .description {
+              font-family: $outfit-font;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 28px;
+              color: $color3;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      height: 216px;
+      background-color: $color1;
+      align-items: start;
+      padding: 56px 39px;
+      figure {
+        width: 110px;
+        height: 40px;
+        img {
+          filter: brightness(0);
+        }
+      }
+      p {
+        color: $color2;
+        font-size: 16px;
+        width: 281px;
+        height: 104px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+      .redes {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        gap: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+}
+
+// ─── Mobile ───
+@include breakpoint(mobile) {
+  .page-location {
+    width: 100%;
+    header {
+      position: relative;
+      width: 100%;
+      height: 550px;
+
+      div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+      }
+
+      .pintura1 {
+        width: 100%;
+        height: 550px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 493px;
+      padding: 50px 10px;
+      background-color: $color2;
+
+      margin: 0px;
+      section.ourlocation {
+        height: auto;
+        article.location {
+          display: flex;
+          flex-direction: column;
+          gap: 48px;
+
+          h2 {
+            font-family: $big-shoulders-font;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 45px;
+            color: $color4;
+            width: 343px;
+            height: 45px;
+          }
+
+          .infolocation {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 343px;
+            height: 296px;
+
+            h3 {
+              font-family: $big-shoulders-font;
+              font-size: 32px;
+              font-weight: 900;
+              line-height: 32px;
+              width: 343px;
+              height: 32px;
+              color: $color1;
+            }
+
+            .adres {
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              font-weight: 200;
+              color: $color4;
+              width: 343px;
+              height: 84px;
+            }
+
+            .description {
+              font-family: $outfit-font;
+              font-size: 18px;
+              line-height: 28px;
+              color: $color4;
+              width: 343px;
+              height: 140px;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      height: 336px;
+      background-color: $color1;
+      align-items: start;
+      padding: 48px 32px;
+      flex-direction: column;
+      figure {
+        width: 110px;
+        height: 40px;
+        img {
+          filter: brightness(0);
+        }
+      }
+      p {
+        color: $color2;
+        font-size: 16px;
+        width: 311px;
+        height: 104px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+      .redes {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        gap: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+}

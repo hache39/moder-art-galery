@@ -1,0 +1,59 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  width: 260px;
+  height: 72px;
+  font-family: $big-shoulders-font;
+  font-size: 20px;
+  color: $color4;
+  padding: 25px 0;
+  text-decoration: none;
+  letter-spacing: 3.64px;
+  display: flex;
+  align-items: center;
+}
+
+.btn1 {
+  @extend .button;
+  background-color: $color2;
+  padding-left: 32px;
+
+  span {
+    background-color: $color1;
+    padding: 24px;
+    margin-left: 32px;
+    height: 72px;
+    width: 64px;
+  }
+  &:hover {
+    background-color: $color1;
+    color: $color2;
+    span {
+      background-color: $color2;
+    }
+  }
+}
+
+.btn2 {
+  @extend .button;
+  background-color: $color2;
+  padding-right: 32px;
+
+  span {
+    background-color: $color1;
+    padding: 24px;
+    margin-right: 32px;
+    height: 72px;
+    width: 64px;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    background-color: $color1;
+    color: $color2;
+    span {
+      background-color: $color2;
+    }
+  }
+}
